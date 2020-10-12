@@ -74,5 +74,15 @@ Route::get('/completed-orders','OrderController@getCompletedOrders')->middleware
 
 Route::get('/add-package', 'Catering_packageController@cateringPackageInsert');
 Route::get('/show-packages', 'Catering_packageController@showAllPackages');
+Route::get('/create-package', 'Catering_packageController@create');
+Route::get('/showadmin', 'Catering_packageController@adminShowAllPackage');
+Route::get('/edit-caterpackage/{id}', 'Catering_packageController@edit');
+Route::get('/update-caterpackage/{id}', 'Catering_packageController@update');
+Route::get('/delete-caterpackage/{id}', 'Catering_packageController@destroy');
+
+
+
 Route::get('/getPackage/{id}', 'Catering_packageController@getOnePackage');
 Route::get('/set-catering-order', 'CustomerController@setCateringOrder');
+// To lis all catering orders
+Route::get('/show_corders', 'Catering_orderController@adminShowAllCOrders');
