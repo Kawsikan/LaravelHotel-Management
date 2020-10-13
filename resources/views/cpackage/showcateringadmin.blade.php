@@ -57,7 +57,7 @@
             @else
             <li class="nav-item dropdown">
                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false" v-pre>
+                    aria-haspopup="true" aria-expanded="false" v-pre title="Logout">
                     {{ Auth::user()->name }}
                 </a>
 
@@ -189,16 +189,18 @@
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
                 <br>
                 <h3 class="text-center">CATERING PACKAGE</h3>
-                <h1 class="h2"><input class="form-control" type="text" placeholder="Search" aria-label="Search"></h1>
+
+                <div class="row">
+                    <div class="col-sm-8">
+                        <a href="/create-package" class="btn btn-info" title="Add package">New</a>
+                        <button type="button" class="btn btn-dark" title="Generate report">Report</button>
+                    </div>
+                    <h1 class="h3"><input class="form-control col-sm-12 offset-sm-8" type="text" placeholder="Search"
+                            aria-label="Search" title="search"></h1>
+                </div>
+
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <div class="btn-toolbar mb-2 mb-md-0">
-                        <div class="btn-group mr-2">
-                            <a href="/create-package" class="btn btn-info">New</a>
-                            <button type="button" class="btn btn-dark">Rept</button>
-                        </div>
-                    </div>
-                    <!-- here removed the div and placed under the table div-->
                     <div class="table-responsive">
                         <table class="table table-striped table-sm">
                             <thead>
@@ -218,7 +220,8 @@
                                     <td>{{$cpackage->description}}</td>
                                     <td>Rs.{{$cpackage->price}}</td>
                                     <td>
-                                        <a href="/edit-caterpackage/{{$cpackage->id}}" class="btn btn-primary">
+                                        <a href="/edit-caterpackage/{{$cpackage->id}}" class="btn btn-primary"
+                                            title="Edit">
                                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil-fill"
                                                 fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd"
@@ -230,7 +233,7 @@
                                         <form action="/delete-caterpackage/{{$cpackage->id}}" method="GET">
                                             @csrf
                                             @method('DELETE')
-                                            <button class="btn btn-danger" type="submit">
+                                            <button class="btn btn-danger" type="submit" title="Delete">
                                                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash"
                                                     fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                                     <path
