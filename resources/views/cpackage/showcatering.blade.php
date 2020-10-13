@@ -47,7 +47,7 @@
         <!--mx-auto,ml-auto,mr-auto-->
         <div class="collapse navbar-collapse" id="navbarsExample09">
             <ul class="navbar-nav mx-auto">
-                <li class="nav-item active ">
+                <li class="nav-item">
                     <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
@@ -57,7 +57,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#"> Delivery</a>
                 </li>
-                <li class="nav-item ">
+                <li class="nav-item active">
                     <a class="nav-link" href="#"> Catering</a>
                 </li>
                 <li class="nav-item">
@@ -97,32 +97,34 @@
         </div>
     </nav>
 
-
+        <!----------------------------------------------------------------------------------------------------------------------->
+        <!----------------------------------------------------------------------------------------------------------------------->
     <main role="main">
+
         <div class="bd-example">
-            <img src="{{URL::asset('/img/catering1.jpg')}}" class="d-block w-100" alt="...">
+            <img src="{{URL::asset('/img/catering1.jpg')}}" class="d-block w-100" alt="image">
         </div>
-
-
-        <!---------------------------------------------------------------------------------------------------------------------------------------------->
-        <!---------------------------------------------------------------------------------------------------------------------------------------------->
+        <!----------------------------------------------------------------------------------------------------------------------->
+        <!----------------------------------------------------------------------------------------------------------------------->
         @foreach ($cpackages as $cpackage)
-        <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-            <div class="my-3 p-3">
+        <div class="bg-light pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div class="my-1">
                 <h2 class="display-5">{{$cpackage->p_name}}</h2>
             </div>
-            <div class="bg-white shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+            <div class="bg-white shadow mx-auto" style="width: 50%; height: 300px; border-radius: 21px 21px 21px 21px;">
+                <br>
+                <img src="{{URL::asset('/img/2.jpg')}}" height="150" width="300" alt="image">
                 <p class="lead">{{$cpackage->description}}</p>
                 <h5 class="display-5">Rs.{{$cpackage->price}}</h5>
                 <a class="btn btn btn-danger" href="/getPackage/{{$cpackage->id}}">BOOK NOW </a>
-
             </div>
+            <br>
         </div>
         </div>
         @endforeach
 
-        <!---------------------------------------------------------------------------------------------------------------------------------------------->
-        <!---------------------------------------------------------------------------------------------------------------------------------------------->
+        <!------------------------------------------------------------------------------------------------------------------------->
+        <!------------------------------------------------------------------------------------------------------------------------->
 
         <!------------------------------FOOTER ------------------------------------>
         <div class="bg-dark text-white">
