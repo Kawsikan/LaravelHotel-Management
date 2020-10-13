@@ -120,74 +120,83 @@
                         <br>
 
                         <div class="form-row">
-                            <label class="col-sm-4 col-form-label" for="name">Package name</label>
+                            <label class="col-sm-4 col-form-label" for="name">Selected package</label>
                             <input type="text" id="catering_name" name="catering_name" value="{{$cpackages->p_name}}"
                                 class="form-control col-sm-8" readonly>
                         </div>
                         <br>
 
                         <div class="form-row">
-                            <label class="col-sm-4 col-form-label" for="name">Package price</label>
+                            <label class="col-sm-4 col-form-label" for="name">Each person</label>
                             <input type="text" id="item_price" name="item_price" value="{{$cpackages->price}}"
                                 class="form-control col-sm-8" readonly>
                         </div>
                         <br>
 
                         <div class="form-row">
-                            <label class="col-sm-4 col-form-label" for="name">Your name</label>
+                            <label class="col-sm-4 col-form-label" for="name">Name</label>
                             <input type="text" id="name" placeholder="Billing Name" name="name"
-                                class="form-control col-sm-8">
+                                class="form-control col-sm-8" required>
                         </div>
                         <br>
 
                         <div class="form-row">
-                            <label class="col-sm-4 col-form-label" for="name">Your address</label>
-                            <input type="text" id="cus_Address" placeholder="Customer address" name="cus_Address"
-                                class="form-control col-sm-8">
+                            <label class="col-sm-4 col-form-label" for="name">Address</label>
+                            <input type="text" id="cus_Address" placeholder="Your address" name="cus_Address"
+                                class="form-control col-sm-8" required>
                         </div>
                         <br>
 
                         <div class="form-row">
-                            <label class="col-sm-4 col-form-label" for="name">Your email</label>
-                            <input type="text" id="email" placeholder="Contact Email" name="email"
-                                class="form-control col-sm-8">
+                            <label class="col-sm-4 col-form-label" for="name">Email</label>
+                            <input type="text" id="email" placeholder="Contact email" name="email"
+                                class="form-control col-sm-8" required>
                         </div>
                         <br>
 
 
                         <div class="form-row">
                             <label class="col-sm-4 col-form-label" for="name">Telephone</label>
-                            <input type="text" id="telephone_number" placeholder="Contact Number"
-                                name="telephone_number" class="form-control col-sm-8">
+                            <input type="text" id="telephone_number" placeholder="Contact number"
+                                name="telephone_number" class="form-control col-sm-8" required>
                         </div>
                         <br>
 
 
                         <div class="form-row">
-                            <label class="col-sm-4 col-form-label" for="date_and_time">Occasion Date</label>
+                            <label class="col-sm-4 col-form-label" for="date_and_time">Event Date</label>
                             <input type="datetime-local" id="date_and_time" name="date_and_time"
-                                class="form-control col-sm-8">
+                                class="form-control col-sm-8" required>
                         </div>
                         <br>
 
                         <div class="form-row">
                             <label class="col-sm-4 col-form-label" for="name">Event Location</label>
                             <input type="text" id="event_location" placeholder="Address of venue" name="event_location"
-                                class="form-control col-sm-8">
+                                class="form-control col-sm-8" required>
                         </div>
                         <br>
 
                         <div class="form-row">
                             <label class="col-sm-4 col-form-label" for="name">Guests </label>
-                            <input type="number" id="event_guests" placeholder="Expected number of Guests"
-                                name="event_guests" class="form-control col-sm-8">
+                            <input type="number" id="event_guests" placeholder="Expected number of guests"
+                                onchange="getPrice()" name="event_guests" class="form-control col-sm-8" required>
                         </div>
                         <br>
 
                         <div class="form-row">
-                            <label class="col-sm-4 col-form-label" for="name">Total amount</label>
-                            <input type="text" id="amount" name="amount" class="form-control col-sm-8">
+                            <label class="col-sm-4 col-form-label" for="name">Bill Amount</label>
+                            <input readonly id="amount" placeholder="Total amount" name="amount"
+                                class="form-control col-sm-8">
                         </div>
+                        <script>
+                            getPrice = function () {
+                                var numVal1 = Number(document.getElementById("item_price").value);
+                                var numVal2 = Number(document.getElementById("event_guests").value);
+                                var totalValue = numVal1 * numVal2
+                                document.getElementById("amount").value = totalValue.toFixed(2);
+                            }
+                        </script>
                         <br>
                         <div class="col text-center">
                             <input type="submit" value="Confirm Order" class="btn btn-danger">

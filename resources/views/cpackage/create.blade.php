@@ -193,19 +193,19 @@
                                 <div class="form-group">
                                     <label for="p_name">Package :</label>
                                     <input type="text" class="form-control" name="p_name"
-                                        placeholder="Enter package name" value="{{ old('p_name') }}" />
+                                        placeholder="Enter package name" value="{{ old('p_name') }}" required />
                                     <small id="emailHelp" class="form-text text-muted">Make sure the name does not
                                         exist.</small>
                                 </div>
                                 <div class="form-group">
                                     <label for="description">Items :</label>
                                     <textarea class="form-control" name="description"
-                                        value="{{ old('description') }}"> </textarea>
+                                        value="{{ old('description') }}" required> </textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="price">Price :</label>
                                     <input type="text" class="form-control" name="price" placeholder="Price"
-                                        value="{{ old('price') }}" />
+                                        value="{{ old('price') }}" required/>
                                 </div>
 
                                 <button type="submit" class="btn btn-primary">Add Package</button>
