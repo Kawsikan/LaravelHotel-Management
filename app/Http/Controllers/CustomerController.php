@@ -34,7 +34,7 @@ class CustomerController extends Controller
         $customer->save();
         $customer->cateringOrder()->save($corder);
 
-        return "catering order has been entered";
+        return redirect('/show-packages')->with('success', 'Your booking has been recorded!, We will reach you Soon. ');
         
     }
     /**

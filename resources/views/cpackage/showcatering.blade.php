@@ -106,6 +106,14 @@
         </div>
         <!----------------------------------------------------------------------------------------------------------------------->
         <!----------------------------------------------------------------------------------------------------------------------->
+        <!-- Show success message when booking is made  -->
+        <div class="col-md-12 text-center">
+                @if(session()->get('success'))
+                <div class="alert alert-success">
+                    {{ session()->get('success') }}
+                </div>
+                @endif
+        </div>
         @foreach ($cpackages as $cpackage)
         <div class="bg-light pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
             <div class="my-1">
