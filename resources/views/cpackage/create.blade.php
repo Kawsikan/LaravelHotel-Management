@@ -76,14 +76,15 @@
         </ul>
 
     </nav>
-    <!------------------------>
+
+    <!-------------------------------------------------------------------Start of Side bar---------------------------------------------------------->
+    <!---------------------------------------------------------------------------------------------------------------------------------------------->
 
     <div class="container-fluid">
         <div class="row">
             <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar collapse">
                 <div class="sidebar-sticky pt-3">
                     <ul class="nav flex-column">
-                        <!--        <button class="nav-item " ><i class="fa fa-home"></i> Home</button>   -->
                         <li class="nav-item">
                             <a class="nav-link " href="#">
                                 <span data-feather="home"></span>
@@ -117,19 +118,19 @@
                         <li class="nav-item">
                             <a class="nav-link active" href="#">
                                 <span data-feather="layers"></span>
-                                Catering packages
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="<?= url('catering_packages/show'); ?>">
-                                <span data-feather="layers"></span>
-                                Catering Home
+                                catering package
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link " href="<?= url('catering_orders'); ?>">
                                 <span data-feather="layers"></span>
-                                Catering orders
+                                catering order
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="<?= url('catering_packages/show'); ?>">
+                                <span data-feather="layers"></span>
+                                catering Home
                             </a>
                         </li>
 
@@ -171,14 +172,27 @@
                 </div>
             </nav>
 
-            <!-- Start of catering_packages.create view  -->
+            <!---------------------------------------------------------------------------------------------------------------------------------------->
+            <!---------------------------------------------------------------------------------------------------------------------------------------->
+            <!-------------------------------------------------------Start of catering_packages.create view ------------------------------------------>
+
             <div class="container-fluid">
 
                 <div class="row">
                     <div class="col-sm-8 offset-sm-3">
                         <br><br>
-                        <h1>Add new package(Menu)</h1>
+                        <a href="/showadmin" class="btn btn-primary">
+                            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-backspace-fill"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 
+                                    2 0 0 0 2-2V3zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 
+                                    0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8 5.829 5.854z" />
+                            </svg></a>
+                        <br><br>
+                        <h2>New Package Menu.</h2>
                         <div>
+                            <!----- To show Error when when invalid input is given (Laravel validation) -->
                             @if ($errors->any())
                             <div class="alert alert-danger">
                                 <ul>
@@ -188,6 +202,7 @@
                                 </ul>
                             </div><br />
                             @endif
+                             <!--------------------------- Form tag Start-------------------------------->
                             <form method="get" action="/add-package">
                                 @csrf
                                 <div class="form-group">
@@ -199,24 +214,26 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="description">Items :</label>
-                                    <textarea class="form-control" name="description"
-                                        value="{{ old('description') }}" required> </textarea>
+                                    <textarea class="form-control" name="description" value="{{ old('description') }}"
+                                        required> </textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="price">Price :</label>
                                     <input type="text" class="form-control" name="price" placeholder="Price"
-                                        value="{{ old('price') }}" required/>
+                                        value="{{ old('price') }}" required />
                                 </div>
 
                                 <button type="submit" class="btn btn-primary">Add Package</button>
                             </form>
+                            <!--------------------------- Form tag Ends------------------------------->
                         </div>
                     </div>
                 </div>
+                <!-- End of catering_packages.create view  -->
+                <!---------------------------------------------------------------------------------------------------------------------------------------->
+                <!---------------------------------------------------------------------------------------------------------------------------------------->
 
 
-
-                <!-- common for all blade files -->
             </div>
 
         </div>
@@ -232,6 +249,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
-</body>
 
+</body>
 </html>
