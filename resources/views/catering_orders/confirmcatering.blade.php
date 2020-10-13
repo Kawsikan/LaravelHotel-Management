@@ -113,27 +113,6 @@
                     <form action="/set-catering-order" method="GET">
                         @csrf
                         <div class="form-row">
-                            <label class="col-sm-4 col-form-label" for="name">Package code</label>
-                            <input type="text" id="package_id" name="package_id" value="{{$cpackages->id}}"
-                                class="form-control col-sm-8" readonly>
-                        </div>
-                        <br>
-
-                        <div class="form-row">
-                            <label class="col-sm-4 col-form-label" for="name">Selected package</label>
-                            <input type="text" id="catering_name" name="catering_name" value="{{$cpackages->p_name}}"
-                                class="form-control col-sm-8" readonly>
-                        </div>
-                        <br>
-
-                        <div class="form-row">
-                            <label class="col-sm-4 col-form-label" for="name">Each person</label>
-                            <input type="text" id="item_price" name="item_price" value="{{$cpackages->price}}"
-                                class="form-control col-sm-8" readonly>
-                        </div>
-                        <br>
-
-                        <div class="form-row">
                             <label class="col-sm-4 col-form-label" for="name">Name</label>
                             <input type="text" id="name" placeholder="Billing Name" name="name"
                                 class="form-control col-sm-8" required>
@@ -154,14 +133,12 @@
                         </div>
                         <br>
 
-
                         <div class="form-row">
                             <label class="col-sm-4 col-form-label" for="name">Telephone</label>
                             <input type="text" id="telephone_number" placeholder="Contact number"
                                 name="telephone_number" class="form-control col-sm-8" required>
                         </div>
                         <br>
-
 
                         <div class="form-row">
                             <label class="col-sm-4 col-form-label" for="date_and_time">Event Date</label>
@@ -174,6 +151,26 @@
                             <label class="col-sm-4 col-form-label" for="name">Event Location</label>
                             <input type="text" id="event_location" placeholder="Address of venue" name="event_location"
                                 class="form-control col-sm-8" required>
+                        </div>
+                        <br>
+                        <div class="form-row">
+                            <label class="col-sm-4 col-form-label" for="name">Package code</label>
+                            <input type="text" id="package_id" name="package_id" value="{{$cpackages->id}}"
+                                class="form-control col-sm-8" readonly>
+                        </div>
+                        <br>
+
+                        <div class="form-row">
+                            <label class="col-sm-4 col-form-label" for="name">Selected package</label>
+                            <input type="text" id="catering_name" name="catering_name" value="{{$cpackages->p_name}}"
+                                class="form-control col-sm-8" readonly>
+                        </div>
+                        <br>
+
+                        <div class="form-row">
+                            <label class="col-sm-4 col-form-label" for="name">Each person</label>
+                            <input type="text" id="item_price" name="item_price" value="{{$cpackages->price}}"
+                                class="form-control col-sm-8" readonly>
                         </div>
                         <br>
 
@@ -199,7 +196,7 @@
                         </script>
                         <br>
                         <div class="col text-center">
-                            <input type="submit" value="Confirm Order" class="btn btn-danger">
+                            <input type="submit" value="Confirm Booking" class="btn btn-danger">
                         </div>
                         <hr>
                     </form>
