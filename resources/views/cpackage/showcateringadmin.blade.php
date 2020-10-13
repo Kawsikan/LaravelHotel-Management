@@ -115,21 +115,21 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">
+                            <a class="nav-link active" href="showadmin">
                                 <span data-feather="layers"></span>
-                                Catering packages
+                                catering package
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="<?= url('catering_packages/show'); ?>">
+                            <a class="nav-link " href="/show_corders">
                                 <span data-feather="layers"></span>
-                                Catering Home
+                                catering order
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="<?= url('catering_orders'); ?>">
+                            <a class="nav-link " href="/">
                                 <span data-feather="layers"></span>
-                                Catering orders
+                                catering Home
                             </a>
                         </li>
 

@@ -57,7 +57,7 @@
             <a class="nav-link" href="#"> Delivery</a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="#"> Catering</a>
+            <a class="nav-link" href="/show-packages"> Catering</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#"> New</a>

@@ -195,7 +195,7 @@
                                     <input type="text" class="form-control" name="p_name"
                                         placeholder="Enter package name" value="{{ old('p_name') }}" required />
                                     <small id="emailHelp" class="form-text text-muted">Make sure the name does not
-                                        exist.</small>
+                                        exist for other packages.</small>
                                 </div>
                                 <div class="form-group">
                                     <label for="description">Items :</label>

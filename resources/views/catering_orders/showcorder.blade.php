@@ -80,7 +80,7 @@
 
     <div class="container-fluid">
         <div class="row">
-            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar collapse">
                 <div class="sidebar-sticky pt-3">
                     <ul class="nav flex-column">
                         <!--        <button class="nav-item " ><i class="fa fa-home"></i> Home</button>   -->
@@ -115,21 +115,21 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link " href="/showadmin">
                                 <span data-feather="layers"></span>
-                                Catering packages
+                                catering package
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="<?= url('catering_packages/show'); ?>">
+                            <a class="nav-link active" href="/show_corders">
                                 <span data-feather="layers"></span>
-                                Catering Home
+                                catering order
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="<?= url('catering_orders'); ?>">
+                            <a class="nav-link " href="/">
                                 <span data-feather="layers"></span>
-                                Catering orders
+                                catering Home
                             </a>
                         </li>
 
@@ -170,72 +170,48 @@
                     </ul>
                 </div>
             </nav>
-            <!-- End of header and side bar -->
 
-
-            <div class="container-fluid">
-                <!-- Start of layout file to view catering orders -->
-                <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-                    <div
-                        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                        <h1 class="h2">Catering Service</h1>
-                        <div class="btn-toolbar mb-2 mb-md-0">
-                            <div class="btn-group mr-2">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Report</button>
-                            </div>
-                            <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                                <span data-feather="calendar"></span>
-                                This week
-                            </button>
-                        </div>
-                    </div>
-
-
-                    <h2></h2>
-                    <div class="table-responsive">
-                        <table class="table table-striped table-sm">
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>PID</th>
-                                    <th>Name</th>
-                                    <th>Date</th>
-                                    <th>Location</th>
-                                    <th>Guests</th>
-                                    <th>Amount</th>
-                                    <th colspan=2>Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach($corders as $corder)
-                                <tr>
-                                    <td>{{$corder->id}}</td>
-                                    <td>{{$corder->catering_package_id}}</td>
-                                    <td>{{$corder->name}}</td>
-                                    <td>{{$corder->date_time}}</td>
-                                    <td>{{$corder->location}}</td>
-                                    <td>{{$corder->guests}}</td>
-                                    <td>{{$corder->amount}}</td>
-                                    <td>
-                                        <a href="/" class="btn btn-primary">Show</a>
-                                    </td>
-                                    <td>
-                                        <form action="/" method="GET">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button class="btn btn-danger" type="submit">Delete</button>
-                                        </form>
-                                    </td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-                    </div>
-                </main>
-                <!-- End  of Show view-->
+            <!-- Start of catering_packages.showcateringadmin  view -->
+            <div class="col-sm-12 text-center">
+                @if(session()->get('success'))
+                <div class="alert alert-success">
+                    {{ session()->get('success') }}
+                </div>
+                @endif
             </div>
 
+
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+                <br>
+                <h3 class="text-center"> catering orders</h3>
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <div class="btn-toolbar mb-2 mb-md-0">
+                        <div class="btn-group mr-2">
+                            <a href="" class="btn btn-primary">New</a>
+                            <button type="button" class="btn btn-info">Rept</button>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- here removed the div and placed under the table div-->
+                    <div class="table-responsive">
+                        <table class="table table-striped table-sm">
+                            
+
+                            </tbody>
+                        </table>
+                    
+                </div>
+            </main>
+
+
+
+
+            <!-- common for all blade files -->
         </div>
+
+    </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
