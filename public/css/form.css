@@ -4,6 +4,11 @@
   color: white;
   min-height: 660px;
   background-color: #343A39 ;
+  background: #a64bf4;
+  background: -webkit-linear-gradient(45deg, #00dbde, #fc00ff);
+  background: -o-linear-gradient(45deg, #00dbde, #fc00ff);
+  background: -moz-linear-gradient(45deg, #00dbde, #fc00ff);
+  background: linear-gradient(45deg, #00dbde, #fc00ff);
   border-radius: 0px;
   box-sizing: border-box;
   width: 100%;

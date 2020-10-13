@@ -198,7 +198,7 @@
                         <div class="col text-center">
                             <input type="submit" value="Confirm Booking" class="btn btn-danger">
                         </div>
-                        <hr>
+                        <br>
                     </form>
 
 
@@ -229,7 +229,7 @@
                 </ul>
             </div>
             <div class="col-6 col-md">
-                <h5>Others</h5>
+                <h5> Services</h5>
                 <ul class="list-unstyled text-small">
                     <li><a class="text-muted" href="#">Take Away Services</a></li>
                     <li><a class="text-muted" href="#">Delivery Services</a></li>
@@ -277,6 +277,8 @@
         <p>&copy; Copyright © 2020 Yummy Hut Food & Catering - All Rights Reserved &middot; <a href="#">Privacy</a>
             &middot; <a href="#">Terms</a></p>
     </footer>
+
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

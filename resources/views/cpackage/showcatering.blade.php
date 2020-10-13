@@ -124,7 +124,7 @@
                 <img src="{{URL::asset('/img/2.jpg')}}" height="150" width="300" alt="image">
                 <p class="lead">{{$cpackage->description}}</p>
                 <h5 class="display-5">Rs.{{$cpackage->price}}</h5>
-                <a class="btn btn btn-danger" href="/getPackage/{{$cpackage->id}}">BOOK NOW </a>
+                <a class="btn btn btn-danger" href="/getPackage/{{$cpackage->id}}" title="Book Now!">BOOK NOW </a>
             </div>
             <br>
         </div>
