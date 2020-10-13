@@ -76,7 +76,9 @@
         </ul>
 
     </nav>
-    <!------------------------>
+    <!--------------------------------------------------------End of Navbar------------------------------------------------------------------->
+    <!---------------------------------------------------------------------------------------------------------------------------------------->
+    <!---------------------------------------------------------------------------------------------------------------------------------------->
 
     <div class="container-fluid">
         <div class="row">
@@ -170,8 +172,12 @@
                     </ul>
                 </div>
             </nav>
+            <!--------------------------------------------------------End of Sidebar------------------------------------------------------------------>
+            <!---------------------------------------------------------------------------------------------------------------------------------------->
 
-            <!-- Start of catering_packages.showcateringadmin  view -->
+            <!-----------------------------------------------------Start of Package listview---------------------------------------------------------->
+            <!------------------------------------------ Start of catering_packages.showcateringadmin  view------------------------------------------->
+
             <div class="col-sm-12 text-center">
                 @if(session()->get('success'))
                 <div class="alert alert-success">
@@ -179,8 +185,6 @@
                 </div>
                 @endif
             </div>
-
-
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
                 <br>
@@ -190,8 +194,8 @@
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <div class="btn-toolbar mb-2 mb-md-0">
                         <div class="btn-group mr-2">
-                            <a href="/create-package" class="btn btn-primary">New</a>
-                            <button type="button" class="btn btn-info">Rept</button>
+                            <a href="/create-package" class="btn btn-info">New</a>
+                            <button type="button" class="btn btn-dark">Rept</button>
                         </div>
                     </div>
                     <!-- here removed the div and placed under the table div-->
@@ -246,10 +250,9 @@
                 </div>
             </main>
 
+            <!------------------------------------------ End of catering_packages.showcateringadmin  view------------------------------------------->
+            <!-------------------------------------------------------------------------------------------------------------------------------------->
 
-
-
-            <!-- common for all blade files -->
         </div>
 
     </div>
