@@ -117,19 +117,19 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">
+                            <a class="nav-link active" href="/showadmin">
                                 <span data-feather="layers"></span>
                                 catering package
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="<?= url('catering_orders'); ?>">
+                            <a class="nav-link " href="/show_corders">
                                 <span data-feather="layers"></span>
                                 catering order
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="<?= url('catering_packages/show'); ?>">
+                            <a class="nav-link " href="/show-packages">
                                 <span data-feather="layers"></span>
                                 catering Home
                             </a>

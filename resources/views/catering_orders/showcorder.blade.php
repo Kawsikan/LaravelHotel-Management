@@ -76,14 +76,16 @@
         </ul>
 
     </nav>
-    <!------------------------>
+    
+    <!-------------------------------------------------------------End of Top Navbar-------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------------------------------------------------->
+        
 
     <div class="container-fluid">
         <div class="row">
             <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar collapse">
                 <div class="sidebar-sticky pt-3">
                     <ul class="nav flex-column">
-                        <!--        <button class="nav-item " ><i class="fa fa-home"></i> Home</button>   -->
                         <li class="nav-item">
                             <a class="nav-link " href="#">
                                 <span data-feather="home"></span>
@@ -127,7 +129,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="/">
+                            <a class="nav-link " href="/show-packages">
                                 <span data-feather="layers"></span>
                                 catering Home
                             </a>
@@ -171,7 +173,9 @@
                 </div>
             </nav>
 
-            <!-- Start of catering_packages.showcateringadmin  view -->
+
+            <!------------------------------------------ Start of catering_Orders.showcorder  view------------------------------------------->
+            <!-------------------------------------------------------------------------------------------------------------------------------------->
             <div class="col-sm-12 text-center">
                 @if(session()->get('success'))
                 <div class="alert alert-success">
@@ -184,31 +188,34 @@
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
                 <br>
-                <h3 class="text-center"> catering orders</h3>
+                <h3 class="text-center">Catering Booking</h3>
+                <div class="row">
+                    <div class="col-sm-8">
+                        <a href="/" class="btn btn-info" title="Add package">New</a>
+                        <button type="button" class="btn btn-dark" title="Generate report">Report</button>
+                    </div>
+                    <h1 class="h3"><input class="form-control col-sm-12 offset-sm-8" type="text" placeholder="Search"
+                            aria-label="Search" title="search"></h1>
+                </div>
+
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <div class="btn-toolbar mb-2 mb-md-0">
-                        <div class="btn-group mr-2">
-                            <a href="" class="btn btn-primary">New</a>
-                            <button type="button" class="btn btn-info">Rept</button>
-                        </div>
-                    </div>
-                    </div>
-                    <!-- here removed the div and placed under the table div-->
+
                     <div class="table-responsive">
                         <table class="table table-striped table-sm">
-                            
 
-                            </tbody>
+
+
                         </table>
-                    
+
+                    </div>
+
                 </div>
+
             </main>
 
-
-
-
-            <!-- common for all blade files -->
+            <!------------------------------------------ End of catering_Orders.showcorder  view------------------------------------------->
+            <!-------------------------------------------------------------------------------------------------------------------------------------->
         </div>
 
     </div>

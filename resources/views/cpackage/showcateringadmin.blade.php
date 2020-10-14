@@ -129,7 +129,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="/">
+                            <a class="nav-link " href="/show-packages">
                                 <span data-feather="layers"></span>
                                 catering Home
                             </a>
@@ -188,7 +188,7 @@
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
                 <br>
-                <h3 class="text-center">CATERING PACKAGE</h3>
+                <h3 class="text-center">Catering Package Menu</h3>
 
                 <div class="row">
                     <div class="col-sm-8">
