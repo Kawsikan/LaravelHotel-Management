@@ -178,10 +178,10 @@
 
 
             <!-- Start of catering_packages.edit view  -->
-            <div class="container-fluid">
+            <div class="bg-light container-fluid">
                 <div class="row">
-                    <div class="col-sm-8 offset-sm-4">
-                        <br><br> <br>
+                    <div class="col-sm-8 offset-sm-3">
+                        <br><br><br>
                         <a href="/showadmin" class="btn btn-primary">
                             <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-backspace-fill"
                                 fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -190,7 +190,9 @@
                                     0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8 5.829 5.854z" />
                             </svg></a>
                         <br><br>
-                        <h2>Update Package Menu.</h2>
+                        <div class="text-center">
+                            <h2>Update Package Menu</h2>
+                        </div>
                         @if ($errors->any())
                         <div class="alert alert-danger">
                             <ul>
@@ -201,31 +203,40 @@
                         </div>
                         <br />
                         @endif
-                        <form method="GET" action="/update-caterpackage/{{$cpackages->id}}">
-                            @method('PATCH')
-                            @csrf
-                            <div class="form-group">
-                                <label for="p_name">Package</label>
-                                <input type="text" id="p_name" class="form-control col-sm-7" name="p_name"
-                                    value={{ $cpackages->p_name }} />
-                            </div>
 
-                            <div class="form-group">
-                                <label for="description">Description</label>
-                                <input type="text" id="description" class="form-control col-sm-7" name="description"
-                                    value={{ $cpackages->description }} />
-                            </div>
-                            <div class="form-group">
-                                <label for="price">Price</label>
-                                <input type="text" id="price" class="form-control col-sm-7" name="price"
-                                    value={{ $cpackages->price }} />
-                            </div>
+                        <!------------------------------ Form tag Start-------------------------------->
+                        <div class="bg-white shadow mx-auto" style="border-radius: 21px 21px 21px 21px;">
+                            <form method="GET" action="/update-caterpackage/{{$cpackages->id}}">
+                                <div class="col-sm-8 offset-sm-3">
 
-                            <br>
-                            <div class="col-sm-7 text-center">
-                                <button type="submit" class="btn btn-danger">Update</button>
-                            </div>
-                        </form>
+                                    @method('PATCH')
+                                    @csrf
+                                    <br>
+                                    <div class="form-group">
+                                        <label for="p_name">Package</label>
+                                        <input type="text" id="p_name" class="form-control col-sm-7" name="p_name"
+                                            value={{ $cpackages->p_name }} />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="description">Description</label>
+                                        <input type="text" id="description" class="form-control col-sm-7"
+                                            name="description" value={{ $cpackages->description }} />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="price">Price</label>
+                                        <input type="text" id="price" class="form-control col-sm-7" name="price"
+                                            value={{ $cpackages->price }} />
+                                    </div>
+
+                                    <br>
+                                    <div class="col-sm-7 text-center">
+                                        <button type="submit" class="btn btn-danger">Update</button>
+                                    </div>
+                                    <br>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>

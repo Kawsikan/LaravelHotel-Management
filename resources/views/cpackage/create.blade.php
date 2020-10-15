@@ -176,11 +176,11 @@
             <!---------------------------------------------------------------------------------------------------------------------------------------->
             <!-------------------------------------------------------Start of catering_packages.create view ------------------------------------------>
 
-            <div class="container-fluid">
+            <div class="bg-light container-fluid">
 
                 <div class="row">
-                    <div class="col-sm-8 offset-sm-4">
-                        <br><br> <br>
+                    <div class="col-sm-8 offset-sm-3">
+                        <br><br><br>
                         <a href="/showadmin" class="btn btn-info">
                             <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-backspace-fill"
                                 fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -189,7 +189,9 @@
                                     0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8 5.829 5.854z" />
                             </svg></a>
                         <br><br>
-                        <h2>New Package Menu.</h2>
+                        <div class="text-center">
+                            <h2>New Package Menu</h2>
+                        </div>
                         <div>
                             <!----- To show Error when when invalid input is given (Laravel validation) -->
                             @if ($errors->any())
@@ -202,30 +204,37 @@
                             </div><br />
                             @endif
                             <!--------------------------- Form tag Start-------------------------------->
-                            <form method="get" action="/add-package">
-                                @csrf
-                                <div class="form-group">
-                                    <label for="p_name">Package</label>
-                                    <input type="text" class="form-control col-sm-7" name="p_name"
-                                        placeholder="Enter unique name" value="{{ old('p_name') }}" required />
-                                    <small id="emailHelp" class="form-text text-muted">Make sure the name does not
-                                        exist for other packages.</small>
-                                </div>
-                                <div class="form-group">
-                                    <label for="description">Items</label>
-                                    <textarea class="form-control col-sm-7" name="description"
-                                        value="{{ old('description') }}" required> </textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label for="price">Price</label>
-                                    <input type="text" class="form-control col-sm-7" name="price" placeholder="Rs."
-                                        value="{{ old('price') }}" required />
-                                </div>
-                                <br>
-                                <div class="col-sm-7 text-center">
-                                    <button type="submit" class="btn btn-danger">Add Package</button>
-                                </div>
-                            </form>
+                            <div class="bg-white shadow mx-auto" style="border-radius: 21px 21px 21px 21px;">
+                                <form method="get" action="/add-package">
+                                    <div class="col-sm-8 offset-sm-3">
+                                        @csrf
+                                        <br>
+                                        <div class="form-group">
+                                            <label for="p_name">Package</label>
+                                            <input type="text" class="form-control col-sm-7" name="p_name"
+                                                placeholder="Enter unique name" value="{{ old('p_name') }}" required />
+                                            <small id="emailHelp" class="form-text text-muted">Make sure the name does
+                                                not
+                                                exist for other packages.</small>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="description">Items</label>
+                                            <textarea class="form-control col-sm-7" name="description"
+                                                value="{{ old('description') }}" required> </textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="price">Price</label>
+                                            <input type="text" class="form-control col-sm-7" name="price"
+                                                placeholder="Rs." value="{{ old('price') }}" required />
+                                        </div>
+                                        <br>
+                                        <div class="col-sm-7 text-center">
+                                            <button type="submit" class="btn btn-danger">Add Package</button>
+                                        </div>
+                                        <br>
+                                    </div>
+                                </form>
+                            </div>
                             <!--------------------------- Form tag Ends------------------------------->
                         </div>
                     </div>
