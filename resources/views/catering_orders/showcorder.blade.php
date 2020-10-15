@@ -191,7 +191,7 @@
                 <h3 class="text-center">Catering Booking</h3>
                 <div class="row">
                     <div class="col-sm-8">
-                        <a href="/show-packages" class="btn btn-info" title="Add package">Dashboard</a>
+                        <a href="/show-packages" class="btn btn-info" title="Package Menu">Dashboard</a>
                         <button type="button" class="btn btn-dark" title="Generate report">Report</button>
                     </div>
                     <h1 class="h3"><input class="form-control col-sm-12 offset-sm-10" type="text" placeholder="Search"
