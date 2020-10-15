@@ -42,10 +42,11 @@ class CustomerController extends Controller
         $corder = Catering_order::all();
         return view('catering_orders.showcorder', ['corders' => $corder]);
     }
-    // Show customer Detail name, email, tel, permanent address
+    // Show customer Detail name, email, tel, permanent address & package detail date, location, Bill amount
     public function adminViewAllCOrders($id){
         $customer = Customer::find($id);
-        return view('catering_orders.viewcorder', ['customers' => $customer]);
+        $corder = Catering_order::find($id);
+        return view('catering_orders.viewcorder', ['customers' => $customer],['corders' => $corder]);
     }
     // To delete a caterind order
     public function destroyCOrder($id)

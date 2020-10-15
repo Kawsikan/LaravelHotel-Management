@@ -204,7 +204,7 @@
                         <table class="table table-striped table-sm">
                             <thead>
                                 <tr>
-                                    <th>ID</th>
+                                    <th>CID</th>
                                     <th>Package</th>
                                     <th>Date & Time</th>
                                     <th>Location</th>

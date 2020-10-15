@@ -178,7 +178,7 @@
             <!------------------------------------------------------------Start of View -------------------------------------------------------------->
 
 
-            <div class="container-fluid">
+            <div class=" bg-light container-fluid">
                 <div class="row">
                     <div class="col-sm-8 offset-sm-3">
                         <br><br>
@@ -191,48 +191,76 @@
                             </svg></a>
                         <br>
                         <div class="text-center">
-                            <h3>Booked Customer Detail</h3>
+                            <h3>Booking & Customer Detail</h3>
                         </div>
 
 
                         <div class="bg-white shadow mx-auto" style="border-radius: 21px 21px 21px 21px;">
 
                             <form>
-                                <div class="col-sm-8 offset-sm-4">
-
+                                <div class="col-sm-8 offset-sm-3">
                                     <br>
-                                    <div class="form-group">
-                                        <label for="p_name">Customer ID</label>
-                                        <input type="text" id="id" class="form-control col-sm-7" name="id"
+                                    <br>
+                                    <div class="form-row">
+                                        <label class="col-sm-4 col-form-label" for="id">Customer ID</label>
+                                        <input readonly id="id" class="form-control col-sm-5" name="id"
                                             value={{$customers->id}}>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="p_name">Name</label>
-                                        <input type="text" id="name" class="form-control col-sm-7" name="name"
+                                    <br>
+                                    <div class="form-row">
+                                        <label class="col-sm-4 col-form-label" for="p_name">Name</label>
+                                        <input readonly id="name" class="form-control col-sm-5" name="name"
                                             value={{$customers->name}}>
                                     </div>
-
-                                    <div class="form-group">
-                                        <label for="description">Customer contact</label>
-                                        <input type="text" id="telephone" class="form-control col-sm-7" name="telephone"
+                                    <br>
+                                    <div class="form-row">
+                                        <label class="col-sm-4 col-form-label" for="description">Customer
+                                            contact</label>
+                                        <input readonly id="telephone" class="form-control col-sm-5" name="telephone"
                                             value={{$customers->telephone}}>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="price">Email</label>
-                                        <input type="text" id="email" class="form-control col-sm-7" name="email"
+                                    <br>
+                                    <div class="form-row">
+                                        <label class="col-sm-4 col-form-label" for="price">Email</label>
+                                        <input readonly id="email" class="form-control col-sm-5" name="email"
                                             value={{$customers->email}}>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="price">Address</label>
-                                        <input type="text" id="address" class="form-control col-sm-7" name="address"
+                                    <br>
+                                    <div class="form-row">
+                                        <label class="col-sm-4 col-form-label" for="price">Customer Address</label>
+                                        <input readonly id="address" class="form-control col-sm-5" name="address"
                                             value={{$customers->address}}>
                                     </div>
-
+                                    <br>
+                                    <div class="form-row">
+                                        <label class="col-sm-4 col-form-label" for="location">Event Location</label>
+                                        <input readonly id="location" class="form-control col-sm-5" name="location"
+                                            value={{$corders->location}}>
+                                    </div>
+                                    <br>
+                                    <div class="form-row">
+                                        <label class="col-sm-4 col-form-label" for="date_time">Date & Time</label>
+                                        <input readonly id="date_time" class="form-control col-sm-5" name="date_time"
+                                            value={{$corders->date_time}}>
+                                    </div>
+                                    <br>
+                                    <div class="form-row">
+                                        <label class="col-sm-4 col-form-label" for="guests">Guests</label>
+                                        <input readonly id="guests" class="form-control col-sm-5" name="guests"
+                                            value={{$corders->guests}}>
+                                    </div>
+                                    <br>
+                                    <div class="form-row">
+                                        <label class="col-sm-4 col-form-label" for="amount">Bill amount</label>
+                                        <input readonly id="amount" class="form-control col-sm-5" name="amount"
+                                            value=Rs.{{$corders->amount}}.00>
+                                    </div>
+                                    <br>
                                     <br>
                                 </div>
                             </form>
                         </div>
-
+                        <br><br>
                     </div>
                 </div>
             </div>

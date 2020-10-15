@@ -208,7 +208,7 @@
                                     <th>ID</th>
                                     <th>Package Name</th>
                                     <th>Description</th>
-                                    <th>Prices per Person</th>
+                                    <th>Unit Price</th>
                                     <th colspan=2>Actions</th>
                                 </tr>
                             </thead>
