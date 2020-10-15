@@ -13,8 +13,13 @@ class Catering_packageController extends Controller
         return view('cpackage.create');
     }
     // Save the packages added by admin
-    public function cateringPackageInsert()
+    public function cateringPackageInsert(Request $request)
     {
+        $request->validate([
+            'p_name'=>'required',
+            'description'=>'required',
+            'price'=>'required'
+        ]);
         $cpackage = new Catering_package();
         $cpackage->p_name= request('p_name');
         $cpackage->description= request('description');
@@ -56,6 +61,11 @@ class Catering_packageController extends Controller
     // Update the edited package
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'p_name'=>'required',
+            'description'=>'required',
+            'price'=>'required'
+        ]);
        
         $cpackage = Catering_package::find($id);
         $cpackage->p_name =  $request->get('p_name');

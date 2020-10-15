@@ -182,7 +182,7 @@
                 <div class="row">
                     <div class="col-sm-8 offset-sm-3">
                         <br><br><br>
-                        <a href="/showadmin" class="btn btn-primary">
+                        <a href="/showadmin" class="btn btn-danger">
                             <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-backspace-fill"
                                 fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 
@@ -231,7 +231,7 @@
 
                                     <br>
                                     <div class="col-sm-7 text-center">
-                                        <button type="submit" class="btn btn-danger">Update</button>
+                                        <button type="submit" class="btn btn-primary">Update</button>
                                     </div>
                                     <br>
                                 </div>
