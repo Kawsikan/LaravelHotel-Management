@@ -121,7 +121,7 @@
             </div>
             <div class="bg-white shadow mx-auto" style="width: 50%; height: 300px; border-radius: 21px 21px 21px 21px;">
                 <br>
-                <img src="{{URL::asset('/img/2.jpg')}}" height="150" width="300" alt="image">
+                <img src="{{URL::asset('/img/car1.jpg')}}" height="150" width="200" alt="image">
                 <p class="lead">{{$cpackage->description}}</p>
                 <h5 class="display-5">Rs.{{$cpackage->price}}</h5>
                 <a class="btn btn btn-danger" href="/getPackage/{{$cpackage->id}}" title="Book Now!">BOOK NOW </a>

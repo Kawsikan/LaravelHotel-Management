@@ -84,5 +84,8 @@ Route::get('/delete-caterpackage/{id}', 'Catering_packageController@destroy');
 
 Route::get('/getPackage/{id}', 'Catering_packageController@getOnePackage');
 Route::get('/set-catering-order', 'CustomerController@setCateringOrder');
-// To lis all catering orders
-Route::get('/show_corders', 'Catering_orderController@adminShowAllCOrders');
+// Admin page to view catering order detail
+Route::get('/show_corders', 'CustomerController@adminShowAllCOrders');
+Route::get('/view_corders/{id}', 'CustomerController@adminViewAllCOrders');
+Route::get('/delete-corder/{id}', 'CustomerController@destroyCOrder');
+

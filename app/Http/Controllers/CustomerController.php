@@ -37,6 +37,25 @@ class CustomerController extends Controller
         return redirect('/show-packages')->with('success', 'Your booking has been recorded!, We will reach you Soon. ');
         
     }
+    // Show table of package detail & date, location, Bill amount
+    public function adminShowAllCOrders(){
+        $corder = Catering_order::all();
+        return view('catering_orders.showcorder', ['corders' => $corder]);
+    }
+    // Show customer Detail name, email, tel, permanent address
+    public function adminViewAllCOrders($id){
+        $customer = Customer::find($id);
+        return view('catering_orders.viewcorder', ['customers' => $customer]);
+    }
+    // To delete a caterind order
+    public function destroyCOrder($id)
+    {
+        $corder = Catering_order::find($id);
+        $corder->delete();
+        return redirect('/show_corders')->with('success', 'Catering booking deleted!');
+    }
+
+    
     /**
      * 
      * auhtor : pamal
