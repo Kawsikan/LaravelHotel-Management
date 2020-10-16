@@ -233,9 +233,15 @@
                                     </div>
                                     <br>
                                     <div class="form-row">
-                                        <label class="col-sm-4 col-form-label" for="location">Event Location</label>
-                                        <input readonly id="location" class="form-control col-sm-5" name="location"
-                                            value={{$corders->location}}>
+                                        <label class="col-sm-4 col-form-label" for="catering_package_id">Package ID</label>
+                                        <input readonly id="catering_package_id" class="form-control col-sm-5" name="catering_package_id"
+                                            value={{$corders->catering_package_id}}>
+                                    </div>
+                                    <br>
+                                    <div class="form-row">
+                                        <label class="col-sm-4 col-form-label" for="name">Selected Package </label>
+                                        <input readonly id="name" class="form-control col-sm-5" name="name"
+                                            value={{$corders->name}}>
                                     </div>
                                     <br>
                                     <div class="form-row">
@@ -243,6 +249,12 @@
                                         <input readonly id="date_time" class="form-control col-sm-5" name="date_time"
                                             value={{$corders->date_time}}>
                                     </div>
+                                    <br>
+                                    <div class="form-row">
+                                        <label class="col-sm-4 col-form-label" for="location">Event Location</label>
+                                        <input readonly id="location" class="form-control col-sm-5" name="location"
+                                            value={{$corders->location}}>
+                                    </div>                 
                                     <br>
                                     <div class="form-row">
                                         <label class="col-sm-4 col-form-label" for="guests">Guests</label>

@@ -195,8 +195,10 @@
                         <a href="/corder-report" class="btn btn-dark" title="View report">Show report</a>
                         <a href="/download-corder" class="btn btn-danger" title="Download report">Download report</a>
                     </div>
-                    <h1 class="h3"><input class="form-control col-sm-12 offset-sm-10" type="text" placeholder="Search"
+                    <form action="/search-corder" method="get">
+                    <h1 class="h3"><input class="form-control col-sm-12 offset-sm-10" type="search" name="searchcorder" placeholder="Search"
                             aria-label="Search" title="search"></h1>
+                    </form>
                 </div>
 
                 <div

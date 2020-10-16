@@ -71,22 +71,28 @@ Route::get('/completed-orders','OrderController@getCompletedOrders')->middleware
  * 
  * author : Kawsikan
  */
-
+// Let admin to add new package
 Route::get('/add-package', 'Catering_packageController@cateringPackageInsert');
+// Show all packages to customer
 Route::get('/show-packages', 'Catering_packageController@showAllPackages');
+// Show create new packages to Admin 
 Route::get('/create-package', 'Catering_packageController@create');
+// Show all packages to Admin
 Route::get('/showadmin', 'Catering_packageController@adminShowAllPackage');
+// Let  Admin to edit package details
 Route::get('/edit-caterpackage/{id}', 'Catering_packageController@edit');
 Route::get('/update-caterpackage/{id}', 'Catering_packageController@update');
+// Admin delete catering packages
 Route::get('/delete-caterpackage/{id}', 'Catering_packageController@destroy');
-
 
 
 Route::get('/getPackage/{id}', 'Catering_packageController@getOnePackage');
 Route::get('/set-catering-order', 'CustomerController@setCateringOrder');
 // Admin page to view catering order detail
 Route::get('/show_corders', 'CustomerController@adminShowAllCOrders');
+// Admin page to individual orders with unique customer ID
 Route::get('/view_corders/{id}', 'CustomerController@adminViewAllCOrders');
+// Admin delete catering orders
 Route::get('/delete-corder/{id}', 'CustomerController@destroyCOrder');
 
 
@@ -99,5 +105,14 @@ Route::get('/download-cpackage','Catering_packageController@downloadAllPDF');
 Route::get('/corder-report','CustomerController@getAllPDFReport');
 // Download Order report
 Route::get('/download-corder','CustomerController@downloadAllPDF');
+
+// cater package  search
+Route::get('/search-cpackage','Catering_packageController@search');
+Route::get('/search-corder','CustomerController@searchcorder');
+/**
+ * 
+ * End Of : Kawsikan
+ */
+
 
 

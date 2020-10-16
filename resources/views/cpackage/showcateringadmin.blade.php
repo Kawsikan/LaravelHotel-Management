@@ -195,8 +195,10 @@
                         <a href="/create-package" class="btn btn-danger" title="Add package">New</a>
                         <a href="/cpackage-report" class="btn btn-dark" title="View report">Report</a>
                     </div>
-                    <h1 class="h3"><input class="form-control col-sm-12 offset-sm-10" type="text" placeholder="Search"
+                    <form action="/search-cpackage" method="get">
+                    <h1 class="h3"><input class="form-control col-sm-12 offset-sm-10" type="search" name="search" placeholder="Search"
                             aria-label="Search" title="search"></h1>
+                    </form>
                 </div>
 
                 <div

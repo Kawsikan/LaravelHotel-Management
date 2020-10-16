@@ -52,8 +52,6 @@ class Catering_packageController extends Controller
         $cpackage = Catering_package::findOrFail($id);
         return view('catering_orders.confirmcatering', ['cpackages' => $cpackage]);
     }
-
-
     
     // Code for editing a package
     public function edit($id)
@@ -96,5 +94,11 @@ class Catering_packageController extends Controller
         $cpackage = Catering_package::all();
         $pdf = PDF::loadView('cpackage.caterpdf',['cpackages' => $cpackage]);
         return $pdf->download('catering-packages.pdf');
+    }
+    public function search(Request $request){
+        $search = $request->get('search');
+        $cpackage = DB::table('catering_packages')->where('p_name', 'like','%'.$search.'%')->paginate(10);   
+        return view('cpackage.showcateringadmin', ['cpackages' => $cpackage]);
+        //$cpackage = DB::table('catering_packages')->paginate(5);  
     }
 }

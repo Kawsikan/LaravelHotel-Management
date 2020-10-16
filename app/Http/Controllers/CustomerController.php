@@ -8,7 +8,7 @@ use App\Order;
 use App\Item;
 use App\Catering_package;
 use App\Catering_order;
-// newly added
+////////////////////////////  ////////  Newly added
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Collection;
 use PDF;
@@ -72,7 +72,13 @@ class CustomerController extends Controller
         return $pdf->download('catering-orders.pdf');
     }
 
+    public function searchcorder(Request $request){
+        $searchcorder = $request->get('searchcorder');
+        $corder = DB::table('catering_orders')->where('name', 'like','%'.$searchcorder.'%')->paginate(10);   
+        return view('catering_orders.showcorder', ['corders' => $corder]);
+    }
 
+    //////////////////////////////////////////////////  END OF Kawsikan   /////////////////////////////////////////////
     
     /**
      * 
