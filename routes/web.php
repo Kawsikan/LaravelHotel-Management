@@ -95,6 +95,9 @@ Route::get('/cpackage-report','Catering_packageController@getAllPDFReport');
 // Download package report
 Route::get('/download-cpackage','Catering_packageController@downloadAllPDF');
 
-
+// PDF catering Order report
+Route::get('/corder-report','CustomerController@getAllPDFReport');
+// Download Order report
+Route::get('/download-corder','CustomerController@downloadAllPDF');
 
 

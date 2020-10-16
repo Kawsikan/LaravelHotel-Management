@@ -8,6 +8,10 @@ use App\Order;
 use App\Item;
 use App\Catering_package;
 use App\Catering_order;
+// newly added
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Collection;
+use PDF;
 
 class CustomerController extends Controller
 {   
@@ -55,6 +59,19 @@ class CustomerController extends Controller
         $corder->delete();
         return redirect('/show_corders')->with('success', 'Catering booking deleted!');
     }
+
+    // Show pdf
+    public function getAllPDFReport(){
+        $corder = Catering_order::all();
+        return view('catering_orders.corderpdf',['corders' => $corder]);
+    }
+    // Download PDF
+    public function downloadAllPDF(){
+        $corder = Catering_order::all();
+        $pdf = PDF::loadView('catering_orders.corderpdf',['corders' => $corder]);
+        return $pdf->download('catering-orders.pdf');
+    }
+
 
     
     /**
