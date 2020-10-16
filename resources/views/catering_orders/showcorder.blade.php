@@ -192,7 +192,7 @@
                 <div class="row">
                     <div class="col-sm-8">
                         <a href="/show-packages" class="btn btn-primary" title="Package Menu">Dashboard</a>
-                        <a href="/corder-report" class="btn btn-dark" title="View report">View Report</a>
+                        <a href="/corder-report" class="btn btn-dark" title="View report">Show report</a>
                         <a href="/download-corder" class="btn btn-danger" title="Download report">Download report</a>
                     </div>
                     <h1 class="h3"><input class="form-control col-sm-12 offset-sm-10" type="text" placeholder="Search"

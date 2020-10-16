@@ -7,12 +7,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cartering package Report</title>
 
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
     <!--styles-->
     <style>
         table,
         th,
         td {
-            border: 2px solid green;
+            border: 2px solid #071a52;
             border-collapse: collapse;
 
         }
@@ -22,10 +29,13 @@
 <body>
     <br>
     <center>
-        <h3 style="color:dark"> Yummy Hut - catering package detail</h3>
+        <h3 style="color:dark"> Yummy-Hut Catering Package Menu Details</h3>
     </center>
-    <br><br>
-
+    <br>
+    <center>
+    <a href="/download-cpackage" class="btn btn-primary" title="Download report">Download</a>
+    </center>
+    <br>
     <center>
         <div>
             <table>

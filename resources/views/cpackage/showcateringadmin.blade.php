@@ -193,8 +193,7 @@
                 <div class="row">
                     <div class="col-sm-8">
                         <a href="/create-package" class="btn btn-danger" title="Add package">New</a>
-                        <a href="/cpackage-report" class="btn btn-dark" title="View report">View report</a>
-                        <a href="/download-cpackage" class="btn btn-success" title="Download report">Download report</a>
+                        <a href="/cpackage-report" class="btn btn-dark" title="View report">Report</a>
                     </div>
                     <h1 class="h3"><input class="form-control col-sm-12 offset-sm-10" type="text" placeholder="Search"
                             aria-label="Search" title="search"></h1>
@@ -221,7 +220,7 @@
                                     <td>{{$cpackage->description}}</td>
                                     <td>Rs.{{$cpackage->price}}</td>
                                     <td>
-                                        <a href="/edit-caterpackage/{{$cpackage->id}}" class="btn btn-primary"
+                                        <a href="/edit-caterpackage/{{$cpackage->id}}" class="btn btn-dark"
                                             title="Edit">
                                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil-fill"
                                                 fill="currentColor" xmlns="http://www.w3.org/2000/svg">
