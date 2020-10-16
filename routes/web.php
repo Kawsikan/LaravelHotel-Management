@@ -89,3 +89,12 @@ Route::get('/show_corders', 'CustomerController@adminShowAllCOrders');
 Route::get('/view_corders/{id}', 'CustomerController@adminViewAllCOrders');
 Route::get('/delete-corder/{id}', 'CustomerController@destroyCOrder');
 
+
+// PDF catering package report
+Route::get('/cpackage-report','Catering_packageController@getAllPDFReport');
+// Download package report
+Route::get('/download-cpackage','Catering_packageController@downloadAllPDF');
+
+
+
+

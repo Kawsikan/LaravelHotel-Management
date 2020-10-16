@@ -1,9 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Catering_package;
+// newly added
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Collection;
+use PDF;
+
 
 class Catering_packageController extends Controller
 {
@@ -81,5 +85,16 @@ class Catering_packageController extends Controller
         $cpackage = Catering_package::find($id);
         $cpackage->delete();
         return redirect('/showadmin')->with('success', 'Package deleted!');
+    }
+    // Show pdf
+    public function getAllPDFReport(){
+        $cpackage = Catering_package::all();
+        return view('cpackage.caterpdf',['cpackages' => $cpackage]);
+    }
+    // Download PDF
+    public function downloadAllPDF(){
+        $cpackage = Catering_package::all();
+        $pdf = PDF::loadView('cpackage.caterpdf',['cpackages' => $cpackage]);
+        return $pdf->download('catering-packages.pdf');
     }
 }
