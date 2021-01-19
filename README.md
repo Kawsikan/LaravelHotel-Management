@@ -1,3 +1,5 @@
+<img width="1440" alt="Cater-Home" src="https://user-images.githubusercontent.com/59009531/105066160-aab42080-5aa4-11eb-8f73-0047e69e3e84.png">
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
